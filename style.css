@@ -296,7 +296,7 @@ img {
 
 .card-img-wrapper {
     overflow: hidden;
-    height: 220px;
+    height: 280px;
 }
 
 .coffee-img {
@@ -352,6 +352,29 @@ img {
 .btn-buy:hover {
     background-color: var(--color-gold);
     color: var(--bg-dark);
+}
+
+.order-message {
+    position: fixed;
+    top: 90px;
+    right: 20px;
+    z-index: 2000;
+    background: linear-gradient(135deg, var(--color-gold), #f2d7a4);
+    color: var(--bg-dark);
+    padding: 0.9rem 1.2rem;
+    border-radius: 8px;
+    box-shadow: 0 10px 25px rgba(0, 0, 0, 0.25);
+    font-weight: 600;
+    max-width: 280px;
+    opacity: 0;
+    transform: translateY(-10px);
+    pointer-events: none;
+    transition: all 0.3s ease;
+}
+
+.order-message.show {
+    opacity: 1;
+    transform: translateY(0);
 }
 
 /* WHY CHOOSE US */
@@ -416,8 +439,7 @@ img {
 }
 
 .pricing-card {
-    background: var(--bg-card);
-    border: 1px solid var(--border-glass);
+    background: #4d4d4d;
     border-radius: 12px;
     padding: 3rem 2rem;
     text-align: center;

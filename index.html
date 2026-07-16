@@ -12,6 +12,8 @@
 </head>
 <body>
 
+    <div id="order-message" class="order-message" role="status" aria-live="polite"></div>
+
     <header class="navbar">
         <div class="nav-container">
             <a href="#" class="logo">
@@ -36,7 +38,7 @@
 
     <section id="home" class="hero" style="background-image: linear-gradient(rgba(18, 11, 8, 0.75), rgba(18, 11, 8, 0.85)), url('images/hero.jpg');">
         <div class="hero-content">
-            <span class="hero-subtitle">Welcome to Brewshi</span>
+            <span class="hero-subtitle">Welcome to BREWSHI</span>
             <h1 class="hero-title">Brew. Sip. Smile.</h1>
             <p class="hero-desc">Experience the perfect blend of premium craft coffee and Zen-like comfort. Freshly ground, masterfully brewed.</p>
             <a href="#menu" class="btn-gold">Order Now</a>
@@ -233,7 +235,7 @@
         <div class="pricing-grid">
             <div class="pricing-card">
                 <div class="tier">Basic</div>
-                <div class="price-amount">$19<span>/mo</span></div>
+                <div class="price-amount">$40<span>/mo</span></div>
                 <ul class="pricing-features">
                     <li><i class="fa-solid fa-circle-check"></i> 5 Premium Coffees / Month</li>
                     <li><i class="fa-solid fa-circle-check"></i> 1 Free Pastry</li>
@@ -246,7 +248,7 @@
             <div class="pricing-card highlighted">
                 <div class="popular-tag">Popular</div>
                 <div class="tier">Premium</div>
-                <div class="price-amount">$39<span>/mo</span></div>
+                <div class="price-amount">$60<span>/mo</span></div>
                 <ul class="pricing-features">
                     <li><i class="fa-solid fa-circle-check"></i> 15 Premium Coffees / Month</li>
                     <li><i class="fa-solid fa-circle-check"></i> 3 Free Pastries</li>
@@ -258,7 +260,7 @@
 
             <div class="pricing-card">
                 <div class="tier">Family</div>
-                <div class="price-amount">$69<span>/mo</span></div>
+                <div class="price-amount">$50<span>/mo</span></div>
                 <ul class="pricing-features">
                     <li><i class="fa-solid fa-circle-check"></i> Unlimited Coffees (Up to 4 people)</li>
                     <li><i class="fa-solid fa-circle-check"></i> Daily Fresh Pastry Platter</li>
@@ -281,12 +283,12 @@
             <div class="review-card">
                 <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p>"Brewshi has the absolute best Flat White in town! The staff is friendly, and the atmosphere is wonderfully relaxing."</p>
-                <div class="reviewer-name">- Sarah M.</div>
+                <div class="reviewer-name">- Alice .D </div>
             </div>
             <div class="review-card">
                 <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
                 <p>"The glassmorphism styling inside the cafée perfectly matches their sleek online menu. Cold brew is smooth, low-acid, and delicious!"</p>
-                <div class="reviewer-name">- David K.</div>
+                <div class="reviewer-name">-Bob .R</div>
             </div>
             <div class="review-card">
                 <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i></div>
@@ -309,14 +311,17 @@
             <div class="gallery-item"><img src="ice coffee.webp" alt="Gallery 3"></div>
             <div class="gallery-item"><img src="Expresso.jpg" alt="Gallery 4"></div>
             <div class="gallery-item"><img src="macchiato.png" alt="Gallery 5"></div>
-            <div class="gallery-item"><img src="coffee area.png" alt="Gallery 6"></div>
+            <div class="gallery-item"><img src="latte.webp" alt="Gallery 6"></div>
+            <div class="gallery-item"><img src="flat white.png" alt="Gallery 6"></div>
+            <div class="gallery-item"><img src="black.webp" alt="Gallery 6"></div>
+
         </div>
     </section>
 
     <section id="contact" class="section-container">
         <div class="section-header">
             <span class="sub-heading">Get in Touch</span>
-            <h2 class="main-heading">Contact Brewshi</h2>
+            <h2 class="main-heading">Contact BREWSHI</h2>
             <div class="divider"></div>
         </div>
 
@@ -335,7 +340,7 @@
         <div class="footer-container">
             <div class="footer-logo">
                 <img src="Brewshi.png" alt="Brewshi" class="footer-logo-img" onerror="this.style.display='none';">
-                <h3>Brewshi</h3>
+                <h3>BREWSHI</h3>
                 <p>Your daily anchor of warmth and energy.</p>
             </div>
             
@@ -358,6 +363,26 @@
             navLinks.classList.toggle('nav-active');
             mobileMenu.querySelector('i').classList.toggle('fa-bars');
             mobileMenu.querySelector('i').classList.toggle('fa-xmark');
+        });
+
+        const orderMessage = document.createElement('div');
+        orderMessage.className = 'order-message';
+        document.body.appendChild(orderMessage);
+
+        document.querySelectorAll('.btn-buy').forEach((button) => {
+            button.addEventListener('click', () => {
+                const card = button.closest('.coffee-card');
+                const drinkName = card?.querySelector('h3')?.textContent || 'your drink';
+
+                orderMessage.textContent = `Your ${drinkName} order has been placed! We’ll contact you shortly.`;
+                orderMessage.classList.add('show');
+
+                document.getElementById('contact').scrollIntoView({ behavior: 'smooth', block: 'start' });
+
+                setTimeout(() => {
+                    orderMessage.classList.remove('show');
+                }, 3500);
+            });
         });
     </script>
 </body>
