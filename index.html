@@ -1,0 +1,364 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>BREWSHI - Brew. Sip. Smile.</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <header class="navbar">
+        <div class="nav-container">
+            <a href="#" class="logo">
+                <img src="Brewshi.png" alt="Brewshi Logo" class="logo-img" onerror="this.style.display='none';"> 
+                <span>Brewshi</span>
+            </a>
+            <nav class="nav-links">
+                <a href="#home" class="active">Home</a>
+                <a href="#menu">Menu</a>
+                <a href="#why-us">Why Us</a>
+                <a href="#pricing">Pricing</a>
+                <a href="#gallery">Gallery</a>
+                <a href="#about">About</a>
+                <a href="#contact">Contact</a>
+            </nav>
+            <div class="nav-btn-container">
+                <a href="#menu" class="btn-gold btn-nav">Order Now</a>
+                <div class="menu-toggle" id="mobile-menu"><i class="fa-solid fa-bars"></i></div>
+            </div>
+        </div>
+    </header>
+
+    <section id="home" class="hero" style="background-image: linear-gradient(rgba(18, 11, 8, 0.75), rgba(18, 11, 8, 0.85)), url('images/hero.jpg');">
+        <div class="hero-content">
+            <span class="hero-subtitle">Welcome to Brewshi</span>
+            <h1 class="hero-title">Brew. Sip. Smile.</h1>
+            <p class="hero-desc">Experience the perfect blend of premium craft coffee and Zen-like comfort. Freshly ground, masterfully brewed.</p>
+            <a href="#menu" class="btn-gold">Order Now</a>
+        </div>
+    </section>
+
+    <!-- PROMO BANNER AD SECTION -->
+    <section class="promo-banner">
+        <div class="banner-content">
+            <div class="banner-text">
+                <span class="banner-badge">Limited Time Offer</span>
+                <h2>Get 20% Off Your First Coffee Subscription!</h2>
+                <p>Join the Brewshi family today and elevate your morning routine.</p>
+            </div>
+            <a href="#pricing" class="btn-dark">Claim Offer</a>
+            <button class="close-banner" onclick="this.parentElement.parentElement.style.display='none'"><i class="fa-solid fa-xmark"></i></button>
+        </div>
+    </section>
+
+    <section id="menu" class="section-container">
+        <div class="section-header">
+            <span class="sub-heading">Freshly Brewed</span>
+            <h2 class="main-heading">Our Coffee Menu</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="menu-grid">
+            <div class="coffee-card">
+                <div class="card-img-wrapper">
+                    <img src="Expresso.jpg" alt="Espresso" class="coffee-img">
+                </div>
+                <div class="card-content">
+                    <h3>Espresso</h3>
+                    <p>A short, concentrated, and intense shot of pure roasted coffee.</p>
+                    <div class="card-footer">
+                        <span class="price">$3.50</span>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <div class="card-img-wrapper">
+                    <img src="cappuccino.avif" alt="Cappuccino" class="coffee-img">
+                </div>
+                <div class="card-content">
+                    <h3>Cappuccino</h3>
+                    <p>Equal parts espresso, steamed milk, and a thick layer of silky milk foam.</p>
+                    <div class="card-footer">
+                        <span class="price">$4.50</span>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <div class="card-img-wrapper">
+                    <img src="latte.webp" alt="Latte" class="coffee-img">
+                </div>
+                <div class="card-content">
+                    <h3>Latte</h3>
+                    <p>One-third espresso and two-thirds steamed milk, topped with light foam.</p>
+                    <div class="card-footer">
+                        <span class="price">$4.75</span>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <div class="card-img-wrapper">
+                    <img src="amiricano.png" alt="Americano" class="coffee-img">
+                </div>
+                <div class="card-content">
+                    <h3>Americano</h3>
+                    <p>Espresso diluted with hot water for a smooth, rich black coffee.</p>
+                    <div class="card-footer">
+                        <span class="price">$3.75</span>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <div class="card-img-wrapper">
+                    <img src="mocha.avif" alt="Mocha" class="coffee-img">
+                </div>
+                <div class="card-content">
+                    <h3>Mocha</h3>
+                    <p>An espresso-based drink fused with rich, warm chocolate and whipped cream.</p>
+                    <div class="card-footer">
+                        <span class="price">$5.00</span>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <div class="card-img-wrapper">
+                    <img src="flat white.png" alt="Flat White" class="coffee-img">
+                </div>
+                <div class="card-content">
+                    <h3>Flat White</h3>
+                    <p>Double espresso with microfoam for a stronger, velvety milk coffee.</p>
+                    <div class="card-footer">
+                        <span class="price">$4.50</span>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <div class="card-img-wrapper">
+                    <img src="macchiato.png" alt="Macchiato" class="coffee-img">
+                </div>
+                <div class="card-content">
+                    <h3>Macchiato</h3>
+                    <p>A bold shot of espresso marked with a small dollop of creamy milk foam.</p>
+                    <div class="card-footer">
+                        <span class="price">$4.00</span>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <div class="card-img-wrapper">
+                    <img src="ice coffee.webp" alt="Cold Brew" class="coffee-img">
+                </div>
+                <div class="card-content">
+                    <h3>Cold Brew</h3>
+                    <p>Coffee grounds steeped in cold water for 18 hours. Smooth and refreshing.</p>
+                    <div class="card-footer">
+                        <span class="price">$4.95</span>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+
+            <div class="coffee-card">
+                <div class="card-img-wrapper">
+                    <img src="caramel.png" alt="Caramel Latte" class="coffee-img">
+                </div>
+                <div class="card-content">
+                    <h3>Caramel Latte</h3>
+                    <p>Our classic latte drizzled with buttery, rich caramel sauce.</p>
+                    <div class="card-footer">
+                        <span class="price">$5.25</span>
+                        <button class="btn-buy">Buy Now</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="why-us" class="why-choose-us">
+        <div class="section-header">
+            <span class="sub-heading">The Brewshi Standard</span>
+            <h2 class="main-heading">Why Choose Us</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="features-grid">
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-seedling"></i></div>
+                <h3>Premium Beans</h3>
+                <p>100% Organic Arabica beans sourced sustainably from the finest global farms.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-mug-hot"></i></div>
+                <h3>Fresh Coffee</h3>
+                <p>Freshly ground to order and roasted weekly to ensure vibrant flavor in every cup.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                <h3>Fast Service</h3>
+                <p>Expert baristas crafting your drinks rapidly without compromising craft quality.</p>
+            </div>
+            <div class="feature-card">
+                <div class="feature-icon"><i class="fa-solid fa-couch"></i></div>
+                <h3>Cozy Environment</h3>
+                <p>Comfortable seating, warm mood lighting, and free Wi-Fi for your productivity or relaxation.</p>
+            </div>
+        </div>
+    </section>
+
+    <section id="pricing" class="section-container">
+        <div class="section-header">
+            <span class="sub-heading">Flexible Options</span>
+            <h2 class="main-heading">Coffee Subscriptions</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="pricing-grid">
+            <div class="pricing-card">
+                <div class="tier">Basic</div>
+                <div class="price-amount">$19<span>/mo</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-circle-check"></i> 5 Premium Coffees / Month</li>
+                    <li><i class="fa-solid fa-circle-check"></i> 1 Free Pastry</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Standard Member Rewards</li>
+                    <li class="disabled"><i class="fa-solid fa-circle-xmark"></i> Free Mug</li>
+                </ul>
+                <button class="btn-pricing">Choose Plan</button>
+            </div>
+
+            <div class="pricing-card highlighted">
+                <div class="popular-tag">Popular</div>
+                <div class="tier">Premium</div>
+                <div class="price-amount">$39<span>/mo</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-circle-check"></i> 15 Premium Coffees / Month</li>
+                    <li><i class="fa-solid fa-circle-check"></i> 3 Free Pastries</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Priority Lounge Seating</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Exclusive Brewshi Mug</li>
+                </ul>
+                <button class="btn-gold">Choose Plan</button>
+            </div>
+
+            <div class="pricing-card">
+                <div class="tier">Family</div>
+                <div class="price-amount">$69<span>/mo</span></div>
+                <ul class="pricing-features">
+                    <li><i class="fa-solid fa-circle-check"></i> Unlimited Coffees (Up to 4 people)</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Daily Fresh Pastry Platter</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Reserved Table Booking</li>
+                    <li><i class="fa-solid fa-circle-check"></i> Free Merchandise Box</li>
+                </ul>
+                <button class="btn-pricing">Choose Plan</button>
+            </div>
+        </div>
+    </section>
+
+    <section class="testimonials">
+        <div class="section-header">
+            <span class="sub-heading">What Our Guests Say</span>
+            <h2 class="main-heading">Reviews</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="testimonials-grid">
+            <div class="review-card">
+                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p>"Brewshi has the absolute best Flat White in town! The staff is friendly, and the atmosphere is wonderfully relaxing."</p>
+                <div class="reviewer-name">- Sarah M.</div>
+            </div>
+            <div class="review-card">
+                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i></div>
+                <p>"The glassmorphism styling inside the cafée perfectly matches their sleek online menu. Cold brew is smooth, low-acid, and delicious!"</p>
+                <div class="reviewer-name">- David K.</div>
+            </div>
+            <div class="review-card">
+                <div class="rating"><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-solid fa-star"></i><i class="fa-regular fa-star-half-stroke"></i></div>
+                <p>"An incredible balance of taste and aesthetic. I highly recommend the Premium Subscription—it pays for itself in a week."</p>
+                <div class="reviewer-name">- Emily R.</div>
+            </div>
+        </div>
+    </section>
+
+    <section id="gallery" class="section-container">
+        <div class="section-header">
+            <span class="sub-heading">Visual Tour</span>
+            <h2 class="main-heading">Our Gallery</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="gallery-grid">
+            <div class="gallery-item"><img src="affogato.webp" alt="Gallery 1"></div>
+            <div class="gallery-item"><img src="cappuccino.avif" alt="Gallery 2"></div>
+            <div class="gallery-item"><img src="ice coffee.webp" alt="Gallery 3"></div>
+            <div class="gallery-item"><img src="Expresso.jpg" alt="Gallery 4"></div>
+            <div class="gallery-item"><img src="macchiato.png" alt="Gallery 5"></div>
+            <div class="gallery-item"><img src="coffee area.png" alt="Gallery 6"></div>
+        </div>
+    </section>
+
+    <section id="contact" class="section-container">
+        <div class="section-header">
+            <span class="sub-heading">Get in Touch</span>
+            <h2 class="main-heading">Contact Brewshi</h2>
+            <div class="divider"></div>
+        </div>
+
+        <div class="contact-wrapper">
+            <form class="contact-form" onsubmit="event.preventDefault();">
+                <input type="text" placeholder="Full Name" required>
+                <input type="email" placeholder="Email Address" required>
+                <input type="text" placeholder="Subject" required>
+                <textarea rows="5" placeholder="Your Message..." required></textarea>
+                <button type="submit" class="btn-gold">Send Message</button>
+            </form>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-logo">
+                <img src="Brewshi.png" alt="Brewshi" class="footer-logo-img" onerror="this.style.display='none';">
+                <h3>Brewshi</h3>
+                <p>Your daily anchor of warmth and energy.</p>
+            </div>
+            
+            <div class="footer-socials">
+                <a href="https://facebook.com" target="_blank"><i class="fa-brands fa-facebook-f"></i></a>
+                <a href="https://instagram.com" target="_blank"><i class="fa-brands fa-instagram"></i></a>
+                <a href="https://twitter.com" target="_blank"><i class="fa-brands fa-twitter"></i></a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Brewshi Coffee Shop. All Rights Reserved.</p>
+        </div>
+    </footer>
+
+    <script>
+        const mobileMenu = document.getElementById('mobile-menu');
+        const navLinks = document.querySelector('.nav-links');
+
+        mobileMenu.addEventListener('click', () => {
+            navLinks.classList.toggle('nav-active');
+            mobileMenu.querySelector('i').classList.toggle('fa-bars');
+            mobileMenu.querySelector('i').classList.toggle('fa-xmark');
+        });
+    </script>
+</body>
+</html>
